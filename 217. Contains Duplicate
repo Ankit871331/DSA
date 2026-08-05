@@ -7,10 +7,12 @@ class Solution {
         map.put(item, map.getOrDefault(item,0)+1);
 
             if(map.get(item) >1){
+
+//result
                 return true;
             }
        } 
-
+//result
        return false;
     }
 }
