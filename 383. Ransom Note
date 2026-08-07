@@ -1,0 +1,28 @@
+class Solution {
+    public boolean canConstruct(String ransomNote, String magazine) {
+        
+        HashMap<Character, Integer>map = new HashMap<>();
+
+        char[] arr1 =  ransomNote.toCharArray();
+        char[] arr2 = magazine.toCharArray();
+
+        for(char c: arr1){
+            map.put(c, map.getOrDefault(c, 0)+1);
+
+        }
+
+        for(char d: arr2){
+            if(map.containsKey(d)){
+                map.put(d, map.get(d)-1);
+                if(map.get(d) == 0){
+                map.remove(d);
+            }
+            }
+
+            
+        }
+
+        return map.isEmpty();
+
+    }
+}
