@@ -1,27 +1,26 @@
 class Solution {
     public int[] findErrorNums(int[] nums) {
 
-        Set<Integer>seen = new HashSet<>();
+        boolean[] bool = new boolean[nums.length +1];
 
-        int missing = -1;
-        int duplicate = -1;
+        int[] ans = {0, 0};
 
-        for(int num: nums){
-            if(seen.contains(num)){
-                duplicate = num;
-            }else{
-                seen.add(num);
+        for(int n: nums){
+
+            if(bool[n] == true)
+                ans[0] = n;
+            else
+                bool[n] = true;
+        }
+
+        for(int i = 1 ; i<= nums.length; i++){
+
+            if(bool[i] == false){
+                ans[1] = i;
             }
         }
 
-        for(int i = 1; i<= nums.length; i++){
-            if(!seen.contains(i)){
-                missing = i;
-                break;
-            }
-        }
-
-        return new int[] {duplicate, missing};
+        return ans;
         
     }
 }
