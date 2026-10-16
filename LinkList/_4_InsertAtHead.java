@@ -20,26 +20,16 @@ public class _4_InsertAtHead {
         head.next.next = new Node(3);
 
         Node newNode = new Node(1);
-        Node current = newNode;
+        newNode.next = head;
+        head = newNode;
 
-        while (head != null) {
-            current.next = head;
-            head = head.next;
+        Node current = head;
+
+        while(current != null){
+            System.out.print(current.data + " ->");
+            current = current.next;
         }
-
-        while (head != null) {
-            System.out.println(head.data);
-            head = head.next;
-            
-
-        }
-
-        Node c  = head;
-
-        while (c != null) {
-            System.out.println(c.data);
-            c = c.next;
-            
-        }
+        System.out.println("null");
+        
     }
 }
