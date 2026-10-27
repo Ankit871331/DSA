@@ -1,0 +1,28 @@
+1. Learn the ~6 techniques before solving problems
+Almost every linked list problem is one of these patterns, or a combination:
+
+#	Technique	Solves
+1	Single-pointer traversal	find, count, print
+2	Two pointers (slow/fast)	middle, Nth-from-end, cycle detection
+3	Dummy node	delete/insert at head, merge lists
+4	In-place reversal	reverse whole/part of list
+5	Merge	merge two sorted, sort list
+6	Recursion	many problems have clean recursive forms
+
+
+
+A checklist for every linked list question
+Ask these 4 questions before coding:
+
+Could the head change? (delete head, insert at front, reverse) → use a dummy node.
+
+Do I need distance from the end? → use two pointers (fast ahead by k).
+
+Am I overwriting a pointer? → save next first. (Node nxt = curr.next; before curr.next = ...)
+
+What are the edge cases? Empty list, 1 node, 2 nodes, deleting head, deleting tail. Trace all of them.
+
+If you can answer these 4, you can code 90% of linked list problems.
+
+
+
