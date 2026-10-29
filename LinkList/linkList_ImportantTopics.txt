@@ -1,13 +1,13 @@
 1. Learn the ~6 techniques before solving problems
 Almost every linked list problem is one of these patterns, or a combination:
 
-#	Technique	Solves
-1	Single-pointer traversal	find, count, print
-2	Two pointers (slow/fast)	middle, Nth-from-end, cycle detection
-3	Dummy node	delete/insert at head, merge lists
-4	In-place reversal	reverse whole/part of list
-5	Merge	merge two sorted, sort list
-6	Recursion	many problems have clean recursive forms
+#	    Technique	                        Solves
+1	    Single-pointer traversal	        find, count, print
+2	    Two pointers (slow/fast)	        middle, Nth-from-end, cycle detection
+3	    Dummy node	                        delete/insert at head, merge lists
+4	    In-place reversal	                reverse whole/part of list
+5	    Merge	                            merge two sorted, sort list
+6	    Recursion	                        many problems have clean recursive forms
 
 
 
@@ -25,4 +25,14 @@ What are the edge cases? Empty list, 1 node, 2 nodes, deleting head, deleting ta
 If you can answer these 4, you can code 90% of linked list problems.
 
 
+****************************************** Patterns start****************************************************
 
+===================================== Single-pointer traversal ==============================================
+
+
+
+
+
+
+
+****************************************** Patterns end****************************************************
