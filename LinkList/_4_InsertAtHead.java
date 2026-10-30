@@ -13,4 +13,22 @@ public class _4_InsertAtHead {
         }
     }
 
+    public static void main(String[] args) {
+        
+        Node head = new Node(2);
+        head.next = new Node(3);
+
+        Node start = new Node(1);
+        start.next = head;
+
+        Node dummy = start;
+
+        while(dummy != null){
+            System.out.println(dummy.data);
+            dummy = dummy.next;
+        }
+        System.out.println("done");
+
+    }
+
 }
