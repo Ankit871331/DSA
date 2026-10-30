@@ -13,23 +13,4 @@ public class _4_InsertAtHead {
         }
     }
 
-    public static void main(String[] args) {
-
-        Node head = new Node(2);
-        head.next = new Node(3);
-        head.next.next = new Node(3);
-
-        Node newNode = new Node(1);
-        newNode.next = head;
-        head = newNode;
-
-        Node current = head;
-
-        while(current != null){
-            System.out.print(current.data + " ->");
-            current = current.next;
-        }
-        System.out.println("null");
-        
-    }
 }
