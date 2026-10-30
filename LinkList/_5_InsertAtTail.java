@@ -13,30 +13,27 @@ public class _5_InsertAtTail {
         }
     }
 
-    public static void main(String[] args) {
-        Node head = new Node(1);
-        head.next = new Node(2);
-        head.next.next = new Node(3);
+public static void main(String[] args) {
+    Node head = new Node(1);
+    head.next = new Node(2);
 
-        Node tail = new Node(4);
 
-        if (head == null) {
-            head = tail;
-        } else {
-            Node temp = head;
-            while (temp.next != null) {
-                temp = temp.next;
-            }
-            temp.next = tail;
-        }
+    Node newNode = new Node(3);
 
-        Node current = head;
+    Node dummy = head;
 
-        while (current != null) {
-            System.out.print(current.data + "->");
-            current = current.next;
-        }
-        System.out.println("null");
-
+    while(dummy.next != null){
+        dummy = dummy.next;
     }
+    dummy.next = newNode;
+
+    Node d = head;
+
+    while(d != null) {
+        System.out.println(d.data);
+        d = d.next;
+    }
+}
+
+
 }
