@@ -22,30 +22,25 @@ public class _6_InsertAtPosition {
         int pos = 2;
         Node val = new Node(3);
 
-        Node current = head;
         int count = 0;
+        Node dommy = new Node(0);
+        dommy.next = head;
+        Node d = dommy;
+        while (count != pos) {
 
-        while (current != null) {
-
-            if (pos-1 == count) {
-                val.next = current.next;
-                current.next = val;
-            } else {
-                current = current.next;
-
-            }
+            d = d.next;
             count++;
-
         }
+        Node p = d.next;
+        d.next = val;
+        val.next = p;
 
-        Node h = head;
+        Node k = head;
 
-        while (h != null) {
-
-            System.out.print(h.data + "->");
-            h = h.next;
+        while (k != null) {
+            System.out.println(k.data);
+            k = k.next;
         }
-        System.out.println("null");
 
     }
 }
