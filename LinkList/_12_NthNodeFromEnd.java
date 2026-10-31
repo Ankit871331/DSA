@@ -17,17 +17,27 @@ public class _12_NthNodeFromEnd {
 
     }
 
-    public static Node findVal(Node head, int pos) {
-        if (head == null || pos <= 0) {
-            return null;
-        }
+    public static void main(String[] args) {
+        Node head = new Node(2);
+        head.next = new Node(3);
+        head.next.next = new Node(4);
+        head.next.next.next = new Node(5);
+        head.next.next.next.next = new Node(6);
+        head.next.next.next.next.next = new Node(7);
+        head.next.next.next.next.next.next = new Node(8);
+        head.next.next.next.next.next.next.next = new Node(9);
+        head.next.next.next.next.next.next.next.next = new Node(10);
+        head.next.next.next.next.next.next.next.next.next = new Node(11);
+
+        int pos = 10;
+
+        
+        
 
         Node slow = head;
         Node fast = head;
 
-        for (int i = 0; i < pos; i++) {
-            if (fast == null)
-                return null;
+        for(int i = 0; i<pos; i++){
             fast = fast.next;
         }
 
@@ -35,18 +45,7 @@ public class _12_NthNodeFromEnd {
             fast = fast.next;
             slow = slow.next;
         }
-        return slow;
-    }
-
-    public static void main(String[] args) {
-
-        Node head = new Node(1);
-        head.next = new Node(2);
-        head.next.next = new Node(3);
-        head.next.next.next = new Node(42);
-
-        Node found = findVal(head, 2);
-        System.out.println(found.data);
+        System.out.println(slow.data);
 
     }
 }
